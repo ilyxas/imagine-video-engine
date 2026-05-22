@@ -146,8 +146,8 @@ This preserves production reliability while enabling creative transition styles.
    - Asset IDs, continuity from previous shot, strict output pipeline.
 2. `/home/runner/work/imagine-video-engine/imagine-video-engine/tests/sample-test.md:7-9,16-17`  
    - Explicit request for dynamic shot sequencing and movement/lighting continuity.
-3. `/home/runner/work/imagine-video-engine/imagine-video-engine/output/scene_20260522T185013Z.txt:1-7`  
-   - Example of progressive multi-shot continuity with persistent subject/props.
+3. `/home/runner/work/imagine-video-engine/imagine-video-engine/output/scene_20260522T185013Z.txt:1-7` and `/home/runner/work/imagine-video-engine/imagine-video-engine/output/scene_20260522T203701Z.txt:1-5`  
+   - Example timestamped outputs in the `scene_YYYYMMDDTHHMMSSZ.txt` pattern, showing continuity-oriented artifacts.
 
 ### Public resources / forums / practice references
 
