@@ -17,10 +17,14 @@ transitions:
   scope: "Guides transition selection within STEP 2 only. Structure and final output requirements remain strict."
   auto_identification:
     instruction: "At each shot boundary, infer transition intent from the strongest continuity signal. Treat the primary_signals list as continuity anchors; prefer them when they support the scene goal, and allow intentional discontinuity when explicitly requested."
+    explicit_discontinuity_triggers:
+      - "Hard-cut directives in user story or shot goals (e.g., abrupt cut, intentional jump, shock cut)"
+      - "Selected transition intent = hard_cut_intentional"
     primary_signals:
       - "Action continuation across boundary"
       - "Camera energy/vector carry-over (pan, dolly, whip)"
       - "Emotional objective continuity"
+    fallback_rationale: "Defaults prioritize robust continuity methods with high reliability under underspecified prompts."
     fallback_order:
       - "match_on_action"
       - "camera_momentum_bridge"
