@@ -16,7 +16,7 @@ transitions:
   title: "TRANSITION INTENT REFERENCE:"
   scope: "Guides transition selection within STEP 2 only. Structure and final output requirements remain strict."
   auto_identification:
-    instruction: "At each shot boundary, infer transition intent from the strongest continuity signal. Treat the primary_signals list as continuity anchors; prefer them when they support the scene goal, and allow intentional discontinuity when explicitly requested."
+    instruction: "At each shot boundary, infer transition intent from continuity anchors in primary_signals order (top to bottom precedence). If no signal is decisive, apply fallback_order. Prefer continuity anchors when they support the scene goal, and allow intentional discontinuity when explicitly requested."
     explicit_discontinuity_triggers:
       - "Hard-cut directives in user story or shot goals (e.g., abrupt cut, intentional jump, shock cut)"
       - "Selected transition intent = hard_cut_intentional"
@@ -24,11 +24,7 @@ transitions:
       - "Action continuation across boundary"
       - "Camera energy/vector carry-over (pan, dolly, whip)"
       - "Emotional objective continuity"
-    signal_priority:
-      - "Action continuation"
-      - "Camera momentum continuity"
-      - "Emotional objective continuity"
-    fallback_rationale: "Fallback defaults prioritize continuity-first methods that are broadly reliable under underspecified prompts; other intents in `available` remain optional and scene-dependent."
+    fallback_rationale: "Fallback order is used only when primary_signals do not produce a decisive intent. It prioritizes continuity-first methods that are broadly reliable under underspecified prompts; other intents in `available` remain optional and scene-dependent."
     fallback_order:
       - "match_on_action"
       - "camera_momentum_bridge"
