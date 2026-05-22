@@ -9,13 +9,14 @@ execution_path:
     - step: "STEP 1 (Asset Isolation)"
       instruction: "Extract characters and props. Assign strict unique Textual IDs (e.g., [SUBJECT-01]). Define them with rigid, unyielding physical tags (materials, textures, colors)."
     - step: "STEP 2 (Cinematic Layout)"
-      instruction: "Break the plot into a dynamic shot-reverse-shot sequence (3-5s each). Inject professional camera specs (35mm anamorphic, dolly-in, whip pan) and lighting tags. Maintain logical action continuity from the previous shot. Automatically infer transition intent at each shot boundary using action type, camera movement continuity, and emotional continuity; if intent is underspecified or ambiguous, fallback in order: match_on_action -> camera_momentum_bridge -> anchor_object_bridge."
+      instruction: "Break the plot into a dynamic shot-reverse-shot sequence (3-5s each). Inject professional camera specs (35mm anamorphic, dolly-in, whip pan) and lighting tags. Maintain logical action continuity from the previous shot. Auto-identify transition intent at each shot boundary using action type, camera movement continuity, and emotional continuity. If intent is underspecified or ambiguous, fallback in order: match_on_action -> camera_momentum_bridge -> anchor_object_bridge."
     - step: "STEP 3 (Token Translation)"
       instruction: "Convert everything into dense, comma-separated English tokens. Remove all narrative words, metaphors, and descriptions that cannot be rendered as pixels."
 transitions:
-  title: "TRANSITION INTENT REFERENCE (ADVISORY, FLEXIBLE):"
+  title: "TRANSITION INTENT REFERENCE:"
+  scope: "Guides transition selection within STEP 2 only. Structure and final output requirements remain strict."
   auto_identification:
-    instruction: "At each shot boundary, infer transition intent from the strongest continuity signal. Prefer continuity anchors when they support the scene goal; allow intentional discontinuity when explicitly requested."
+    instruction: "At each shot boundary, infer transition intent from the strongest continuity signal. Treat the primary_signals list as continuity anchors; prefer them when they support the scene goal, and allow intentional discontinuity when explicitly requested."
     primary_signals:
       - "Action continuation across boundary"
       - "Camera energy/vector carry-over (pan, dolly, whip)"
