@@ -140,13 +140,13 @@ This preserves production reliability while enabling creative transition styles.
 
 ## Sources
 
-### Repository references (absolute paths and lines)
+### Repository references (paths and lines)
 
-1. `/home/runner/work/imagine-video-engine/imagine-video-engine/engine/imagine_scene_generator.yaml:9-14,17-21`  
+1. `engine/imagine_scene_generator.yaml:9-14,17-21`  
    - Asset IDs, continuity from previous shot, strict output pipeline.
-2. `/home/runner/work/imagine-video-engine/imagine-video-engine/tests/sample-test.md:7-9,16-17`  
+2. `tests/sample-test.md:7-9,16-17`  
    - Explicit request for dynamic shot sequencing and movement/lighting continuity.
-3. `/home/runner/work/imagine-video-engine/imagine-video-engine/output/scene_20260522T185013Z.txt:1-7` and `/home/runner/work/imagine-video-engine/imagine-video-engine/output/scene_20260522T203701Z.txt:1-5`  
+3. `output/scene_20260522T185013Z.txt:1-7` and `output/scene_20260522T203701Z.txt:1-5`  
    - Example timestamped outputs in the `scene_YYYYMMDDTHHMMSSZ.txt` pattern, showing continuity-oriented artifacts.
 
 ### Public resources / forums / practice references
