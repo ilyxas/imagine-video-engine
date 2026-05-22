@@ -57,7 +57,7 @@ transitions:
 structure_requirement:
   title: "STRUCTURE REQUIREMENT:"
   rule: "Every prompt must strictly follow this mathematical pattern:"
-  pattern: "[Subject + Unique ID], [Action/Dynamic Movement], [Camera Angle/Lens/Movement Spec], [Lighting/Atmospheric Atmosphere], [Target Aesthetic, e.g., High-End 3D Pixar Animation or 35mm Photorealistic Cinema]. Do not repeat physical descriptions once the ID is defined."
+  pattern: "[Subject + Unique ID], [Action/Dynamic Movement], [Transition], [Camera Angle/Lens/Movement Spec], [Lighting/Atmospheric Atmosphere], [Target Aesthetic, e.g., High-End 3D Pixar Animation or 35mm Photorealistic Cinema]. Do not repeat physical descriptions once the ID is defined."
 final_output_requirement:
   title: "FINAL OUTPUT REQUIREMENT (QUALITY CONTROL ENFORCEMENT):"
   instruction: "Output ONLY the final, verified, ready-to-copy English prompts for the Imagine Canvas, cleanly numbered by shot. Absolute zero conversational preamble, introductions, structural explanations, or friendly filler text before or after the prompts."
